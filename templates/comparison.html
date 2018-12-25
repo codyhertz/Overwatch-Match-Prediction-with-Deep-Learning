@@ -1,0 +1,44 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Model Accuracries</h1>
+    <br>
+    <img src="/static/accuracies.png" alt="accuracies blah">
+    <br>
+    <br>
+    <div class="row">
+      Accuracy of 7 Layer Deep Neural Network with Complex Data: {{ accuracy3 * 100}}%
+    </div>
+    <br>
+    <div class="row">
+      Accuracy of 7 Layer Deep Neural Network with Simplified Data: {{ accuracy4 * 100}}%
+    </div>
+    <br>
+    <div class="row">
+      Accuracy of 5 Layer Deep Neural Network with Complex Data: {{ accuracy1 * 100}}%
+    </div>
+    <br>
+    <div class="row">
+      Accuracy of 5 Layer Deep Neural Network with Simplified Data: {{ accuracy2 * 100}}%
+    </div>
+    <br>
+    <div class="row">
+      Accuracy of SVM with Complex Data(Polynomial Kernel): {{ accuracy7 * 100 }}%
+    </div>
+    <br>
+    <div class="row">
+      Accuracy of SVM with Simplified Data(Polynomial Kernel): {{ accuracy8 * 100}}%
+    </div>
+    <br>
+    <div class="row">
+      Accuracy of Logistical Regression with Complex Data: {{ accuracy5 * 100}}%
+    </div>
+    <br>
+    <div class="row">
+      Accuracy of Logistical Regression with Simplified Data: {{ accuracy6 * 100}}%
+    </div>
+  </div>
+</div>
+{% endblock %}

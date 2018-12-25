@@ -1,0 +1,22 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+  <div class="jumbotron">
+    <h1 class="text-center">Welcome to The Overwatch Game Predictor</h1>
+    <p class="lead text-center">This app was made as part of my machine learning final project. It uses deep neural networks to predict the outcome of a quickplay match of Overwatch.</p>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <a class="nav-link" href="/predict">Input Game Data to Predict the Outcome of the Match</a>
+      </li>
+      <li class="list-group-item">
+        <a class="nav-link" href="/new">Input New Data to Later Add to the Model</a>
+      </li>
+      <li class="list-group-item">
+        <a class="nav-link" href="/train">Retrain the Models (WARNING: THIS TAKES A MINIMUM OF 30 MINUTES TO COMPLETE!)</a>
+      </li>
+      <li class="list-group-item">
+        <a class="nav-link" href="/comparison">Compare with Other ML Models</a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}

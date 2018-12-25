@@ -1,0 +1,52 @@
+{% extends 'layout.html'%}
+{% from "includes/_formhelpers.html" import render_field %}
+
+{% block body %}
+  <div class="jumbotron">
+    <h1 class="text-center">Match Prediction</h1>
+    <form method="POST">
+      <h2>Match Information</h2>
+      <div class="row" style="border: solid darkgrey; border-radius: 10px;">
+        <div class="column">
+          <div class="row">
+            {{ render_field(form.map, class_="form-control") }}
+          </div>
+        </div>
+        <div class="column">
+          <div class="row">
+            {{ render_field(form.position, class_="form-control") }}
+          </div>
+        </div>
+      </div>
+      <br>
+      <h2>Team Members</h2>
+      <div class="row" style="border: solid darkgrey; border-radius: 10px;">
+        <div class="column">{{ render_field(form.team_member1, class_="form-control") }}</div>
+        <div class="column">{{ render_field(form.team_member2, class_="form-control") }}</div>
+        <div class="column">{{ render_field(form.team_member3, class_="form-control") }}</div>
+        <div class="column">{{ render_field(form.team_member4, class_="form-control") }}</div>
+        <div class="column">{{ render_field(form.team_member5, class_="form-control") }}</div>
+        <div class="column">{{ render_field(form.team_member6, class_="form-control") }}</div>
+      </div>
+      <br>
+      <h2>Opponents</h2>
+      <div class="row" style=" border: solid darkgrey; border-radius: 10px;">
+        <div class="column">{{ render_field(form.enemy_member1, class_="form-control") }}</div>
+        <div class="column">{{ render_field(form.enemy_member2, class_="form-control") }}</div>
+        <div class="column">{{ render_field(form.enemy_member3, class_="form-control") }}</div>
+        <div class="column">{{ render_field(form.enemy_member4, class_="form-control") }}</div>
+        <div class="column">{{ render_field(form.enemy_member5, class_="form-control") }}</div>
+        <div class="column">{{ render_field(form.enemy_member6, class_="form-control") }}</div>
+      </div>
+      <br>
+      <h2>Algorithm</h2>
+      <div class="row" style=" border: solid darkgrey; border-radius: 10px;">
+        <div class="column">{{ render_field(form.algorithm, class_="form-control") }}</div>
+      </div>
+      <br>
+      <div class="row" style="float: right;">
+        <input type="submit" class="btn btn-success" value="Submit Data">
+      </div>
+    </form>
+  </div>
+{% endblock %}
